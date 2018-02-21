@@ -63,6 +63,43 @@ function getCoords(){
     console.log('hola coordenadas');
   }  
 
+// Trazando ruta
+var puntoPartida = document.getElementById("puntoPartida");
+var puntoDestino = document.getElementById("puntoDestino");
+new google.maps.places.Autocomplete(puntoPartida);
+new google.maps.places.Autocomplete(puntoDestino);
 
+var direccionService = new google.maps.DirectionsService;
+//console.log(direccionService);
+var direccionDisplay = new google.maps.DirectionsRenderer;
+//console.log(direccionDisplay);
+var calcularRuta = function (direccionService, direccionDisplay) {
+  var request = {
+    origin: puntoPartida.value,
+    destination: puntoDestino.value,
+    travelMode: 'DRIVING'
+  };
+//   console.log(request); 
+  direccionService.route(request, function(result, status) {
+    console.log(request);
+    if (status == 'OK') {
+      direccionDisplay.setDirections(result);
+    }
+  });
+  direccionDisplay.setMap(map);
+  marcador.setMap(null);
+
+}
+
+window.addEventListener("load",search);
+
+
+let inputSearch = document.getElementById('puntoDestino');
+let place = new google.maps.places.Autocomplete(inputSearch);
+place.addListener('place_changed', () => {
+ calcularRuta(direccionService, direccionDisplay);   
+ getCoords();
+    
+});
 
 }

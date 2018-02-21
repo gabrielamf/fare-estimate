@@ -1,0 +1,10 @@
+#map {
+    height: 400px;
+  }
+  .bg-car {
+    background-color: rgb(228, 255, 246);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
