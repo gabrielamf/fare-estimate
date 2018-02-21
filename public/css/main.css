@@ -2,9 +2,24 @@
     height: 400px;
   }
   .bg-car {
-    background-color: rgb(228, 255, 246);
+    background-image: url('../assets/images/back.jpg');
+    background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  body{
+    color: #ede1d5;
+    font-weight: bold;
+  }
+  .opacity{
+    background-color: #19151591;
+  }
+.btn-primary {
+    color: #fff;
+    border-color: #c18a2b;
+    background-color: #ea9d13;
+    font-weight: bold;
+}

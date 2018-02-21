@@ -21,6 +21,7 @@
   </head>
   <body>
     <section id="tarifa" class="bg-car">
+      <div class="opacity">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -40,7 +41,7 @@
                 <p id="cslog" class="hidden"></p>
                 <p id="celat" class="hidden"></p>
                 <p id="celog" class="hidden"></p>
-                <button id= "estimatePrice" type="button" class="btn btn-default col-md-offset-3">Tarifas de recorrido</button>
+                <button id= "estimatePrice" type="button" class="btn btn-primary  col-md-offset-3">Tarifas de recorrido</button>
                 <div id="estimTarifa" class="col-md-offset-3"></div>
                 <div id="calcTarifa" class="col-md-offset-3"></div>
               </div>
@@ -51,6 +52,7 @@
           </div>
         </div>
       </div>
+    </div>
     </section>
     <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlSMC4wD05y_sulhag8dbEkCNvA9NFQbI&callback=initMap&libraries=places"
